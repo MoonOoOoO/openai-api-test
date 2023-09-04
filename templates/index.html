@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>测试</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='dog.png') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+    <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
+    <h3>法律AI咨询</h3>
+    <h3 style="color: red;">（功能测试，非最终产品）</h3>
+    <form action="/" method="post">
+        <input type="text" name="animal" placeholder="请输入您的问题" required />
+        <input type="submit" value="生成回答" />
+    </form>
+    {% if result %}
+    <div class="result" style="padding: 0 20%;">{{ result }}</div>
+    {% endif %}
+</body>
