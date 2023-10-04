@@ -1,7 +1,7 @@
+import os
 import openai
 
-openai.api_key = ""
-
+openai.api_key = os.getenv('OPENAI_API_KEY')
 res = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[
