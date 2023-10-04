@@ -26,6 +26,7 @@ def chat_with_bot(messages):
     for chunk in response:
         if chunk['choices'][0]['delta']:
             print(chunk['choices'][0]['delta']['content'], end="")
+    print()
 
 
 if __name__ == "__main__":
